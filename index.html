@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script type="text/javascript" src="js/Lib.js" ></script>
+    <link rel="stylesheet" href="css/colorpicker-style.css">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Paint</title>
 </head>
 <body>
     <div class="painter">
         <div class="tools">
-            <ul class="colors">
-                <li class="black" data-color="black"></li>
-                <li class="blue" data-color="blue"></li>
-                <li class="green" data-color="green"></li>
-                <li class="red" data-color="red"></li>
-                <li class="yellow" data-color="yellow"></li>
-                <li class="white" data-color="white"></li>
-            </ul>
-            <!-- / colors -->
             <button class="btn-clear">Clear canvas</button>
             <div class="select">
                 <div class="select-text">Choose line width</div>
@@ -36,15 +30,34 @@
                     <option data-width="10">10px</option>
                 </select>
              </div>
-             <input class="downloadImg" type="file" name="" id="">
-            </div>
-            
+             
+        </div>
+
         <div class="field">
             <canvas id="canvas">Your browser is not supported.</canvas>
         </div>
         
     </div>
-    
+    <div class="picker" id="primary_block" >
+
+        <div id="line">
+        <div id="arrows">
+        <div class="left_arrow"></div>
+        <div class="right_arrow"></div>
+        </div>
+        </div>
+        
+        <div id="block_picker">
+        
+        <img src="https://lh3.googleusercontent.com/-8Dm4nhAOssQ/T_IqwyIFXmI/AAAAAAAAACA/4QKmS7s_otE/s256/bgGradient.png" class="bk_img"><div class="circle" id="circle"></div>
+        </div>
+        <div id="out_color" class="out_color"></div>
+        </div>
+    <!-- color-picker -->
+    <script src="js/picker.js"></script>
+    <script>
+        picker.init();
+    </script>
 
     <script src="js/script.js"></script>
 </body>
