@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Paint</title>
+</head>
+<body>
+    <div class="painter">
+        <div class="tools">
+            <ul class="colors">
+                <li class="black" data-color="black"></li>
+                <li class="blue" data-color="blue"></li>
+                <li class="green" data-color="green"></li>
+                <li class="red" data-color="red"></li>
+                <li class="yellow" data-color="yellow"></li>
+                <li class="white" data-color="white"></li>
+            </ul>
+            <!-- / colors -->
+            <button class="btn-clear">Clear canvas</button>
+            <div class="select">
+                <div class="select-text">Choose line width</div>
+                <select class="selectLineWidth" name="lineWidth" id="" size="1">
+                    <option data-width="1">1px</option>
+                    <option data-width="2">2px</option>
+                    <option data-width="3">3px</option>
+                    <option data-width="4">4px</option>
+                    <option data-width="5">5px</option>
+                    <option data-width="6">6px</option>
+                    <option data-width="7">7px</option>
+                    <option data-width="8">8px</option>
+                    <option data-width="9">9px</option>
+                    <option data-width="10">10px</option>
+                </select>
+             </div>
+             <input class="downloadImg" type="file" name="" id="">
+            </div>
+            
+        <div class="field">
+            <canvas id="canvas">Your browser is not supported.</canvas>
+        </div>
+        
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

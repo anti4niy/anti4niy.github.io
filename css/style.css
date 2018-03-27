@@ -1,0 +1,111 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	color: #777;
+	font: 300 15px/1 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	font-weight: normal;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover, a:active{
+	text-decoration: none;
+}
+ul, ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+img{
+	max-width: 100%;
+}
+textarea{
+	resize: vertical;
+}
+/* === Default Styles === */
+
+/* Tools bar */
+.tools{
+    display: flex;
+    align-items: center;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+}
+.tools .colors{
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+.tools .colors li{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 10%;
+}
+.tools .colors li + li{
+    margin-left: 5px;
+}
+.tools .colors .black{
+    background-color: black;
+}
+.tools .colors .blue{
+    background-color: blue;
+}
+.tools .colors .green{
+    background-color: green;
+}
+.tools .colors .red{
+    background-color: red;
+}
+.tools .colors .yellow{
+    background-color: yellow;
+}
+.tools .colors .white{
+    background-color: white;
+}
+
+.tools .btn-clear{
+    margin-left: 10px;
+    background-color: #fff;
+    border: 1px solid grey;
+    height: 50px;
+    border-radius: 10%;
+}
+.select{
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #000;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #000;
+    color: #000;
+}
+.select .selectLineWidth {
+    margin-top: 10px;
+}
+
+/* Tools bar end */
+
+/* Canvas field */
+
+.field{
+    background-image: url(../img/fer-de-lance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    cursor: url(../img/pensil.png), crosshair;
+}
+#canvas{
+    display: block;
+    background-color: #fff;
+}
