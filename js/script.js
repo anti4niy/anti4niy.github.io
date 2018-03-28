@@ -9,6 +9,7 @@ let btnClear = document.querySelector('.btn-clear');
 let downloadImg = document.querySelector('.downloadImg');
 let btnColorPick = document.querySelector('.btn-color-picker');
 let currentColor = document.querySelector('.current-color');
+let eraser = document.querySelector('.eraser');
 
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
@@ -28,6 +29,11 @@ btnColorPick.addEventListener('click', e => {
     
 });
 
+// eraser.addEventListener('click', e => {
+//     currentColor.style.backgroundColor = '#fff';
+//     color = '#fff';
+// });
+
 btnClear.addEventListener('click', e => clear());
 
 canv.addEventListener('mousedown', function() {
@@ -45,9 +51,6 @@ document.addEventListener('mousemove', e => {
 });
 
 canv.addEventListener('mousemove', function(e) {
-
-    
-    
     if(isMouseDown) {
 
         ctx.fillStyle = color;
