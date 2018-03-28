@@ -171,8 +171,8 @@ var Line ={
 			
 			     picker.out_color.style.backgroundColor = "rgb("+convert.hsv_rgb(Line.Hue,S,V)+")";
 				 var _res = convert.hsv_rgb(Line.Hue,S,V);
-			     _res = _res[0].toString(16)+""+_res[1].toString(16)+""+_res[2].toString(16);
-				 
+				 _res = _res[0].toString(16)+""+_res[1].toString(16)+""+_res[2].toString(16);
+			
 			}
 			
 			block.onclick = function(e){Block.cPos(e);}

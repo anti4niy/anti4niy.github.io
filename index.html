@@ -6,16 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css/colorpicker-style.css">
 
     <link rel="stylesheet" href="css/style.css">
+
     <title>Paint</title>
 </head>
 <body>
     <div class="painter">
         <div class="tools">
             <button class='btn btn-color-picker'>Hide Color Picker ▲</button>
+            <div class="current-color"></div>
+            <!-- btn-color-picker -->
+            <div class="eraser ml-3">
+                <i class="fas fa-eraser"></i>
+            </div>
+            <!-- /eraser -->
             <button class="btn btn-clear">Clear canvas</button>
+            <!-- /btn-clear -->
             <div class="select">
                 <div class="select-text">Choose line width</div>
                 <select class="selectLineWidth" name="lineWidth" id="" size="1">
@@ -30,11 +41,10 @@
                     <option data-width="9">9px</option>
                     <option data-width="10">10px</option>
                 </select>
-                <div class="eraser"></div>
-             </div>
-             
+            </div>
+            <!-- /selectLineWidth -->
         </div>
-        <!-- /selectLineWidth-->
+        <!-- /tools-->
 
         <div class="field">
             <canvas id="canvas">Your browser is not supported.</canvas>

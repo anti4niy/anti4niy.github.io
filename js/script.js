@@ -2,12 +2,13 @@ let canv = document.getElementById('canvas');
 let ctx = canv.getContext('2d');
 let isMouseDown = false; 
 let selectLineWidth = document.querySelector('.selectLineWidth');   
-let lineWidth = 1;
+let lineWidth = selectLineWidth.options.selectedIndex + 1;
 let colorPicker = document.getElementById('primary_block');
 let color = 'black';
 let btnClear = document.querySelector('.btn-clear');
 let downloadImg = document.querySelector('.downloadImg');
 let btnColorPick = document.querySelector('.btn-color-picker');
+let currentColor = document.querySelector('.current-color');
 
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
@@ -38,10 +39,15 @@ canv.addEventListener('mouseup', function() {
     ctx.beginPath();
 });
 
+document.addEventListener('mousemove', e => {
+    currentColor.style.backgroundColor = getComputedStyle(document.getElementById('out_color')).backgroundColor;
+    color = getComputedStyle(document.getElementById('out_color')).backgroundColor;
+});
+
 canv.addEventListener('mousemove', function(e) {
 
-    color = getComputedStyle(document.getElementById('out_color')).backgroundColor;
-
+    
+    
     if(isMouseDown) {
 
         ctx.fillStyle = color;
