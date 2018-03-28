@@ -15,6 +15,7 @@
 	margin:0 auto;
 	top:75px;
 	left:0;	
+	user-select: none;
 	-moz-user-select: none;
 	  -webkit-user-select: none; 
 	  width:250px;

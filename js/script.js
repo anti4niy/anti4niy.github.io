@@ -3,25 +3,32 @@ let ctx = canv.getContext('2d');
 let isMouseDown = false; 
 let selectLineWidth = document.querySelector('.selectLineWidth');   
 let lineWidth = 1;
-let colors = document.querySelector('.colors');
+let colorPicker = document.getElementById('primary_block');
 let color = 'black';
 let btnClear = document.querySelector('.btn-clear');
 let downloadImg = document.querySelector('.downloadImg');
+let btnColorPick = document.querySelector('.btn-color-picker');
 
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
-
-// colors.addEventListener('click', function(e) {
-//     color = _res;
-// });
-//document.addEventListener('change', e => color = getComputedStyle(document.getElementById('out_color')).backgroundColor);
 
 selectLineWidth.addEventListener('change', function(e) {
     lineWidth = selectLineWidth.options.selectedIndex + 1;
 });
 
+btnColorPick.addEventListener('click', e => {
+    if (getComputedStyle(colorPicker).display === 'none' ) {
+        btnColorPick.textContent = 'Hide Color Picker ▲';
+        colorPicker.style.display = 'block';
+    } else {
+        btnColorPick.textContent = 'Show Color Picker ▼';
+        colorPicker.style.display = 'none';
+    }
+    
+});
+
 btnClear.addEventListener('click', e => clear());
-//btnClear.addEventListener('touchstart,')
+
 canv.addEventListener('mousedown', function() {
     isMouseDown = true;
 });
@@ -32,7 +39,7 @@ canv.addEventListener('mouseup', function() {
 });
 
 canv.addEventListener('mousemove', function(e) {
-    
+
     color = getComputedStyle(document.getElementById('out_color')).backgroundColor;
 
     if(isMouseDown) {

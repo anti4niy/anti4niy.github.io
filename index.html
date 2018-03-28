@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script type="text/javascript" src="js/Lib.js" ></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/colorpicker-style.css">
 
     <link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,8 @@
 <body>
     <div class="painter">
         <div class="tools">
-            <button class="btn-clear">Clear canvas</button>
+            <button class='btn btn-color-picker'>Hide Color Picker ▲</button>
+            <button class="btn btn-clear">Clear canvas</button>
             <div class="select">
                 <div class="select-text">Choose line width</div>
                 <select class="selectLineWidth" name="lineWidth" id="" size="1">
@@ -29,35 +30,40 @@
                     <option data-width="9">9px</option>
                     <option data-width="10">10px</option>
                 </select>
+                <div class="eraser"></div>
              </div>
              
         </div>
+        <!-- /selectLineWidth-->
 
         <div class="field">
             <canvas id="canvas">Your browser is not supported.</canvas>
         </div>
-        
+        <!-- /canvas -->
     </div>
+    <!-- Color Picker -->
     <div class="picker" id="primary_block" >
 
         <div id="line">
-        <div id="arrows">
-        <div class="left_arrow"></div>
-        <div class="right_arrow"></div>
-        </div>
+            <div id="arrows">
+                <div class="left_arrow"></div>
+                <div class="right_arrow"></div>
+            </div>
         </div>
         
         <div id="block_picker">
         
-        <img src="https://lh3.googleusercontent.com/-8Dm4nhAOssQ/T_IqwyIFXmI/AAAAAAAAACA/4QKmS7s_otE/s256/bgGradient.png" class="bk_img"><div class="circle" id="circle"></div>
+            <img src="https://lh3.googleusercontent.com/-8Dm4nhAOssQ/T_IqwyIFXmI/AAAAAAAAACA/4QKmS7s_otE/s256/bgGradient.png" class="bk_img"><div class="circle" id="circle"></div>
         </div>
         <div id="out_color" class="out_color"></div>
-        </div>
+    </div>
     <!-- color-picker -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/Lib.js" ></script>
     <script src="js/picker.js"></script>
-    <script>
-        picker.init();
-    </script>
+    <script>picker.init();</script>
 
     <script src="js/script.js"></script>
 </body>
