@@ -14,6 +14,7 @@ canv.height = window.innerHeight;
 // colors.addEventListener('click', function(e) {
 //     color = _res;
 // });
+//document.addEventListener('change', e => color = getComputedStyle(document.getElementById('out_color')).backgroundColor);
 
 selectLineWidth.addEventListener('change', function(e) {
     lineWidth = selectLineWidth.options.selectedIndex + 1;
@@ -32,6 +33,8 @@ canv.addEventListener('mouseup', function() {
 
 canv.addEventListener('mousemove', function(e) {
     
+    color = getComputedStyle(document.getElementById('out_color')).backgroundColor;
+
     if(isMouseDown) {
 
         ctx.fillStyle = color;
