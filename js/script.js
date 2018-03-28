@@ -11,9 +11,9 @@ let downloadImg = document.querySelector('.downloadImg');
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
-colors.addEventListener('click', function(e) {
-    color = e.target.dataset.color;
-});
+// colors.addEventListener('click', function(e) {
+//     color = _res;
+// });
 
 selectLineWidth.addEventListener('change', function(e) {
     lineWidth = selectLineWidth.options.selectedIndex + 1;

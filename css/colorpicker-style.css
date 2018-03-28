@@ -13,8 +13,8 @@
 .picker{
 	position:absolute;
 	margin:0 auto;
-	top:30%;
-	left:40%;	
+	top:75px;
+	left:0;	
 	-moz-user-select: none;
 	  -webkit-user-select: none; 
 	  width:250px;
